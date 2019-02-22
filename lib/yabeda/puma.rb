@@ -3,6 +3,8 @@
 require 'yabeda/puma/version'
 require 'yabeda'
 
+require 'yabeda/puma/collector'
+
 module Yabeda
   module Puma
     class Error < StandardError; end
@@ -32,4 +34,4 @@ module Yabeda
   end
 end
 
-Yabeda::Puma.install!
+Yabeda::Puma.install! if defined?(::Puma)
