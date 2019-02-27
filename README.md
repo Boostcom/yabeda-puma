@@ -10,17 +10,7 @@ Add this line to your application's Gemfile:
 gem 'yabeda-puma'
 ```
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install yabeda-puma
-
-## Usage
-
-TODO: Write usage instructions here
+Unfortunately there is no easy way to detect whether process is running within Puma server. To enable exporter set either `PUMA_SERVER` or `YABEDA_PUMA_ENABLED` to any value.
 
 ## Development
 

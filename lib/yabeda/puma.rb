@@ -26,7 +26,7 @@ module Yabeda
           end
 
           collect do
-            Puma::Collector.new.collect_metrics
+            Yabeda::Puma::Collector.new.collect_metrics
           end
         end
       end
@@ -34,4 +34,4 @@ module Yabeda
   end
 end
 
-Yabeda::Puma.install! if defined?(::Puma)
+Yabeda::Puma.install! if defined?(::Puma) && (ENV['YABEDA_PUMA_ENABLED'] || ENV['PUMA_SERVER'])
